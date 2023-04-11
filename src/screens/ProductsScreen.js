@@ -38,7 +38,7 @@ const ProductsScreen = ({ navigation }) => {
             // update selected product
             // dispatch(productsSlice.actions.setSelectedProduct(item.id));
 
-            navigation.navigate('Product Details', { id: item._id });
+            navigation.navigate('Product Details', { id: item.id });
           }}
           style={styles.itemContainer}
         >

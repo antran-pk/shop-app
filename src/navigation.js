@@ -41,7 +41,7 @@ const Navigation = () => {
                 onPress={() => navigation.navigate('Track Order')}
                 name="truck-delivery"
                 size={22}
-                color="gray"
+                color="grey"
               />
             ),
           })}

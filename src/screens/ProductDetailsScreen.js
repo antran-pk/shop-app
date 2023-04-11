@@ -83,7 +83,8 @@ const styles = StyleSheet.create({
     letterSpacing: 1.5,
   },
   description: {
-    marginVertical: 10,
+    marginTop: 10,
+    marginBottom: 500,
     fontSize: 18,
     lineHeight: 30,
     fontWeight: '300',
@@ -92,7 +93,7 @@ const styles = StyleSheet.create({
   button: {
     position: 'absolute',
     backgroundColor: 'black',
-    bottom: 30,
+    bottom: 20,
     width: '90%',
     alignSelf: 'center',
     padding: 20,

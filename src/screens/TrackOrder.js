@@ -22,8 +22,8 @@ const TrackOrder = () => {
       />
 
       {isLoading && <ActivityIndicator />}
-      {data?.status !== 'OK' && <Text>Order not found</Text>}
-      {data?.status === 'OK' && (
+      {data?.success == false && <Text>Order not found</Text>}
+      {data?.success === true && (
         <Text>{JSON.stringify(data.data, null, 2)}</Text>
       )}
     </View>

@@ -1,6 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
-const baseUrl = 'http://localhost:3000/';
+const baseUrl = 'https://973a-115-78-95-194.ngrok-free.app/api/';
 
 export const apiSlice = createApi({
   reducerPath: 'api',

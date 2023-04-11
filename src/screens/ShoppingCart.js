@@ -63,8 +63,14 @@ const ShoppingCart = () => {
     const response = await createPaymentIntent({
       amount: Math.floor(total * 100),
     });
+
     if (response.error) {
       Alert.alert('Something went wrong');
+      return;
+    }
+
+    if (response.data.success) {
+      onCreateOrder();
       return;
     }
 
@@ -73,6 +79,7 @@ const ShoppingCart = () => {
       merchantDisplayName: 'notJust.dev',
       paymentIntentClientSecret: response.data.paymentIntent,
     });
+
     if (initResponse.error) {
       console.log(initResponse.error);
       Alert.alert('Something went wrong');
@@ -101,16 +108,16 @@ const ShoppingCart = () => {
       deliveryFee,
       total,
       customer: {
-        name: 'Vadim',
+        name: 'An Tran',
         address: 'My home',
-        email: 'vadim@notjust.dev',
+        email: 'antran.pk@gmail.com',
       },
     });
 
-    if (result.data?.status === 'OK') {
+    if (result.data?.success) {
       Alert.alert(
         'Order has been submitted',
-        `Your order reference is: ${result.data.data.ref}`
+        `Your order reference is: ${result.data.data.id}`
       );
       dispatch(cartSlice.actions.clear());
     }
